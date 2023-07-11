@@ -29,18 +29,7 @@ class SettingsViewController: UIViewController {
         TypeOfCell(type: .switchCell, text: "это свитчер"),
         TypeOfCell(type: .switchCell, text: "Тема"),
         TypeOfCell(type: .openCell, text: "Цвет машины"),
-        TypeOfCell(type: .openCell, text: "Основные"),
-        TypeOfCell(type: .switchCell, text: "это свитчер"),
-        TypeOfCell(type: .switchCell, text: "Тема"),
-        TypeOfCell(type: .openCell, text: "Цвет машины"),
-        TypeOfCell(type: .openCell, text: "Основные"),
-        TypeOfCell(type: .switchCell, text: "это свитчер"),
-        TypeOfCell(type: .switchCell, text: "Тема"),
-        TypeOfCell(type: .openCell, text: "Цвет машины"),
-        TypeOfCell(type: .openCell, text: "Основные"),
-        TypeOfCell(type: .switchCell, text: "это свитчер"),
-        TypeOfCell(type: .switchCell, text: "Тема"),
-        TypeOfCell(type: .openCell, text: "Цвет машины"),
+        
 
     ]
     
@@ -48,10 +37,14 @@ class SettingsViewController: UIViewController {
 }
 
 extension SettingsViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        15
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
