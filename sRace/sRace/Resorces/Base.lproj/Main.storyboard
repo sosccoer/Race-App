@@ -132,8 +132,34 @@
                     <view key="view" contentMode="scaleToFill" id="45r-kw-gYc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4K-lM-IhS">
+                                <rect key="frame" x="16" y="752" width="361" height="50"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Сбросить ">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="placeholderTextColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="q7q-FN-xoS">
+                                <rect key="frame" x="0.0" y="103" width="393" height="633"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="XV0-DT-lHj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XV0-DT-lHj" firstAttribute="bottom" secondItem="n4K-lM-IhS" secondAttribute="bottom" constant="16" id="0Hg-qu-OMA"/>
+                            <constraint firstItem="q7q-FN-xoS" firstAttribute="top" secondItem="XV0-DT-lHj" secondAttribute="top" id="0lP-6t-FSG"/>
+                            <constraint firstItem="q7q-FN-xoS" firstAttribute="leading" secondItem="XV0-DT-lHj" secondAttribute="leading" id="Lka-FS-nzS"/>
+                            <constraint firstItem="XV0-DT-lHj" firstAttribute="trailing" secondItem="n4K-lM-IhS" secondAttribute="trailing" constant="16" id="TWy-Uz-SML"/>
+                            <constraint firstItem="XV0-DT-lHj" firstAttribute="trailing" secondItem="q7q-FN-xoS" secondAttribute="trailing" id="a0i-UI-Q5I"/>
+                            <constraint firstItem="n4K-lM-IhS" firstAttribute="leading" secondItem="XV0-DT-lHj" secondAttribute="leading" constant="16" id="fFe-G5-34Z"/>
+                            <constraint firstItem="n4K-lM-IhS" firstAttribute="top" secondItem="q7q-FN-xoS" secondAttribute="bottom" constant="16" id="z6J-Tv-I0S"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Stats" id="eOa-3E-0eK"/>
                 </viewController>

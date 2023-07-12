@@ -16,11 +16,11 @@ class SettingsClass {
     
     
         var initialSettings: [TypeOfCell] = [
-            TypeOfCell(type: .switchCell, text: "надеюсь победа", switcher: true),
-            TypeOfCell(type: .switchCell, text: "надеюсь не сосу", switcher: false)
-
+            TypeOfCell(type: .switchCell, text: "Тени", switcher: true),
+            TypeOfCell(type: .openCell, text: "Графика", switcher: false),
+            TypeOfCell(type: .switchCell, text: "Звук", switcher: false),
+            TypeOfCell(type: .openCell, text: "Улучшения", switcher: false)
             
-        
     ]
     
     
