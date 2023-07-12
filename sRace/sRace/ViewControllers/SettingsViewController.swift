@@ -12,9 +12,11 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet private var TableView: UITableView!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        fillDefaultValues()
         
         TableView.dataSource = self
         let switchNib = UINib(nibName: "Settings", bundle: nil)
@@ -22,21 +24,46 @@ class SettingsViewController: UIViewController {
         let openNib = UINib(nibName: "OpenSetting", bundle: nil)
         TableView.register(openNib, forCellReuseIdentifier: "OpenSetting")
         
+        TableView.delegate = self
+        TableView.dataSource = self
     }
     
-    private var items :[TypeOfCell] = [
-        TypeOfCell(type: .openCell, text: "Основные"),
-        TypeOfCell(type: .switchCell, text: "это свитчер"),
-        TypeOfCell(type: .switchCell, text: "Тема"),
-        TypeOfCell(type: .openCell, text: "Цвет машины"),
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-
-    ]
+    }
     
-
+    
+    
+    
+    
+    
+    
+    private var items = SettingsClass.sharedInfo.settings
+    
+    
+    
+    private func fillDefaultValues () {
+        
+        items = SettingsClass.sharedInfo.initialSettings
+        
+    }
+    
+    func updateSetting () {
+        
+        items = SettingsClass.sharedInfo.settings
+        
+    }
+    
+    @IBAction func SaveChanges(_ sender: UIButton) {
+        
+        SettingsClass.sharedInfo.saveSettings()
+        TableView.reloadData()
+    }
+    
 }
 
-extension SettingsViewController: UITableViewDataSource {
+extension SettingsViewController: UITableViewDataSource,UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
@@ -47,6 +74,7 @@ extension SettingsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let index = indexPath.row
         
         let item = items[indexPath.row]
         
@@ -56,11 +84,11 @@ extension SettingsViewController: UITableViewDataSource {
             return cell
         case .switchCell : let cell = tableView.dequeueReusableCell(withIdentifier: "Settings", for: indexPath) as! Settings
             cell.configure(with: item.text)
+            cell.switcher.isOn = (items[index].switcher as? Bool) ?? false
             return cell
-
+            
         }
         
     }
-    
     
 }

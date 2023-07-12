@@ -8,9 +8,10 @@
 import Foundation
 
 struct TypeOfCell{
-
+    
    var type: TypeCell
    var text: String
+    var switcher:Any
     
 }
 
@@ -20,3 +21,7 @@ enum TypeCell {
     case openCell
     
 }
+
+
+
+

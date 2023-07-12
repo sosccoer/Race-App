@@ -71,6 +71,9 @@
                                             </backgroundConfiguration>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="SaveChanges:" destination="O5A-pk-lTy" eventType="touchUpInside" id="CuO-nv-YhO"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPF-fy-rXv">
                                         <rect key="frame" x="16" y="16.000000000000004" width="172.66666666666666" height="54.333333333333343"/>
@@ -191,7 +194,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="sRace" leftItemsSupplementBackButton="YES" customizationIdentifier="" id="ckZ-aP-Cb9">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="VA0-d2-NgZ">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="bUC-NE-4hv">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="bUC-NE-4hv">
                                 <rect key="frame" x="16" y="2" width="51" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
