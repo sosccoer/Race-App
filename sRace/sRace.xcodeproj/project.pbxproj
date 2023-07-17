@@ -19,6 +19,8 @@
 		7D0D58532A5C47E500281153 /* OpenSetting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D0D58522A5C47E500281153 /* OpenSetting.xib */; };
 		7D0D58552A5C47F300281153 /* OpenSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0D58542A5C47F300281153 /* OpenSetting.swift */; };
 		7D0D58572A5C4F2800281153 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0D58562A5C4F2800281153 /* FeedItem.swift */; };
+		7D3237332A632C5500476039 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3237312A632C5500476039 /* StartViewController.swift */; };
+		7D3237342A632C5500476039 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D3237322A632C5500476039 /* StartViewController.xib */; };
 		7D773B432A5E1F9E005C9573 /* SettingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D773B422A5E1F9E005C9573 /* SettingManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		7D0D58522A5C47E500281153 /* OpenSetting.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenSetting.xib; sourceTree = "<group>"; };
 		7D0D58542A5C47F300281153 /* OpenSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSetting.swift; sourceTree = "<group>"; };
 		7D0D58562A5C4F2800281153 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		7D3237312A632C5500476039 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		7D3237322A632C5500476039 /* StartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
 		7D773B422A5E1F9E005C9573 /* SettingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +87,8 @@
 			children = (
 				7D0D58322A59DEBC00281153 /* ViewController.swift */,
 				7D0D58492A5C3D9F00281153 /* SettingsViewController.swift */,
+				7D3237312A632C5500476039 /* StartViewController.swift */,
+				7D3237322A632C5500476039 /* StartViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -199,6 +205,7 @@
 				7D0D58382A59DEBE00281153 /* Assets.xcassets in Resources */,
 				7D0D584E2A5C415200281153 /* Settings.xib in Resources */,
 				7D0D58362A59DEBC00281153 /* Main.storyboard in Resources */,
+				7D3237342A632C5500476039 /* StartViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +221,7 @@
 				7D0D582F2A59DEBC00281153 /* AppDelegate.swift in Sources */,
 				7D0D58552A5C47F300281153 /* OpenSetting.swift in Sources */,
 				7D0D58312A59DEBC00281153 /* SceneDelegate.swift in Sources */,
+				7D3237332A632C5500476039 /* StartViewController.swift in Sources */,
 				7D0D584A2A5C3D9F00281153 /* SettingsViewController.swift in Sources */,
 				7D0D58572A5C4F2800281153 /* FeedItem.swift in Sources */,
 				7D0D58502A5C428500281153 /* Settings.swift in Sources */,

@@ -70,7 +70,7 @@ extension SettingsViewController: UITableViewDataSource,UITableViewDelegate {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        15
+        5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

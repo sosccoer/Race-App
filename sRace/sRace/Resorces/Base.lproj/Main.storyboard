@@ -190,7 +190,7 @@
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="shC-TT-Wol" kind="show" id="f7F-jP-fOQ"/>
+                                    <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RFY-fO-P0M"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vR6-ji-JVy">
@@ -252,22 +252,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-335.1145038167939" y="-13.380281690140846"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="ZOy-aV-lAb">
-            <objects>
-                <viewController id="shC-TT-Wol" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="uwI-Vs-Xl3">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="hK6-ab-S3J"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Se9-GJ-Afd"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="d6I-pI-F63" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="447" y="-13"/>
         </scene>
     </scenes>
     <resources>
