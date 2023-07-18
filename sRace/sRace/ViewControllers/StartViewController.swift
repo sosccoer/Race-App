@@ -8,7 +8,7 @@
 import UIKit
 
 class StartViewController: UIViewController {
-
+    
     @IBOutlet weak var SegmentController: UISegmentedControl!
     
     
@@ -28,9 +28,21 @@ class StartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let lSwipe = UISwipeGestureRecognizer()
+        lSwipe.direction = .left
+        lSwipe.addTarget(self, action: #selector(swipe))
+        
+        let rSwipe = UISwipeGestureRecognizer()
+        rSwipe.direction = .right
+        rSwipe.addTarget(self, action: #selector(swipe))
+        
+        view.addGestureRecognizer(lSwipe)
+        view.addGestureRecognizer(rSwipe)
+        
+        
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -40,7 +52,7 @@ class StartViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-       changeCarPosition(SegmentController)
+        changeCarPosition(SegmentController)
     }
     
     func setupCoorditates () {
@@ -78,9 +90,6 @@ class StartViewController: UIViewController {
     }
     @IBAction func changeCarPosition(_ sender: UISegmentedControl) {
         
-        
-        
-        
         switch sender.selectedSegmentIndex {
             
         case 0: UIView.animate(withDuration: 1) { [weak self] in
@@ -105,4 +114,55 @@ class StartViewController: UIViewController {
         
     }
     
+    @objc func swipe (sender: UISwipeGestureRecognizer) {
+        
+        switch sender.direction {
+            
+        case .left: left(image:carImage)
+        case .right:right(image: carImage)
+            
+        default : break
+            
+            
+        }
+        
+        func left (image:UIImageView) {
+            
+            UIView.animate(withDuration: 1) { [weak self] in
+                
+                if image.frame.origin.x == self?.rightOriginCoordinate {
+                    
+                    image.frame.origin.x = self?.centreOriginCoordinate ?? 0
+                    
+                }else if image.frame.origin.x == self?.centreOriginCoordinate{
+                    image.frame.origin.x = self?.leftOriginCoordinate ?? 0
+                }else {
+                    image.frame.origin.x = self?.leftOriginCoordinate ?? 0
+                }
+                
+            }
+                
+        }
+        
+        func right(image:UIImageView) {
+            
+            UIView.animate(withDuration: 1) { [weak self] in
+                
+                if image.frame.origin.x == self?.rightOriginCoordinate {
+                    
+                    image.frame.origin.x = self?.rightOriginCoordinate ?? 0
+                    
+                }else if image.frame.origin.x == self?.centreOriginCoordinate{
+                    image.frame.origin.x = self?.rightOriginCoordinate ?? 0
+                }else {
+                    image.frame.origin.x = self?.centreOriginCoordinate ?? 0
+                }
+                
+            }
+                
+        }
+        
+        
+        
+    }
 }
