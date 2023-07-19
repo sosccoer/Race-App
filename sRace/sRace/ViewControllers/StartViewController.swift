@@ -86,7 +86,7 @@ class StartViewController: UIViewController {
         
         pitImage.frame = CGRect(x: rightOriginCoordinate, y: yCoordinateOfPit, width: elementSize, height: elementSize)
         
-        roadImage.frame = CGRect(x: 0, y: topPanding, width: screenWidth, height: screenHeight - topPanding - bottomPanding)
+        roadImage.frame = CGRect(x: 0, y: topPanding, width: screenWidth, height: screenHeight - topPanding)
         
         view.addSubview(roadImage)
         view.addSubview(carImage)

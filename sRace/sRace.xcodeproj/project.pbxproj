@@ -96,8 +96,8 @@
 		7D0D584B2A5C411600281153 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				7D0D58512A5C47CB00281153 /* openSettings */,
-				7D0D584C2A5C412B00281153 /* SettingCell */,
+				7D3237362A68074F00476039 /* Cells for stats */,
+				7D3237352A68073500476039 /* Cells for settings */,
 				7D0D58562A5C4F2800281153 /* FeedItem.swift */,
 			);
 			path = Cells;
@@ -115,10 +115,26 @@
 		7D0D58512A5C47CB00281153 /* openSettings */ = {
 			isa = PBXGroup;
 			children = (
+				7D0D584C2A5C412B00281153 /* SettingCell */,
 				7D0D58522A5C47E500281153 /* OpenSetting.xib */,
 				7D0D58542A5C47F300281153 /* OpenSetting.swift */,
 			);
 			path = openSettings;
+			sourceTree = "<group>";
+		};
+		7D3237352A68073500476039 /* Cells for settings */ = {
+			isa = PBXGroup;
+			children = (
+				7D0D58512A5C47CB00281153 /* openSettings */,
+			);
+			path = "Cells for settings";
+			sourceTree = "<group>";
+		};
+		7D3237362A68074F00476039 /* Cells for stats */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Cells for stats";
 			sourceTree = "<group>";
 		};
 		7D773B3F2A5DD2BB005C9573 /* Resorces */ = {

@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,15 +13,44 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forLunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="o7F-I6-2rO">
+                                <rect key="frame" x="21.666666666666657" y="209" width="350" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="4jJ-zU-XjY"/>
+                                    <constraint firstAttribute="width" constant="350" id="Zch-Xv-4SN"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="West_Coast_Customs_logo_PNG_(13)" translatesAutoresizingMaskIntoConstraints="NO" id="zv5-j3-Dim">
+                                <rect key="frame" x="59" y="575" width="275" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="LIW-Iy-QUs"/>
+                                    <constraint firstAttribute="width" constant="275" id="imD-Lb-tyY"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zv5-j3-Dim" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6iD-lQ-dCy"/>
+                            <constraint firstItem="zv5-j3-Dim" firstAttribute="top" secondItem="o7F-I6-2rO" secondAttribute="bottom" constant="16" id="HrN-FX-Esi"/>
+                            <constraint firstItem="o7F-I6-2rO" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="aSs-lA-mVY"/>
+                            <constraint firstItem="o7F-I6-2rO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="yAt-pS-TOe"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.671755725190835" y="374.64788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="West_Coast_Customs_logo_PNG_(13)" width="920" height="504"/>
+        <image name="forLunchScreen" width="1024" height="1024"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
