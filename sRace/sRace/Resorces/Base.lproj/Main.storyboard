@@ -178,9 +178,22 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="RRR-zc-anJ">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7j-qG-eaq">
-                                <rect key="frame" x="16" y="226" width="200" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vR6-ji-JVy">
+                                <rect key="frame" x="254" y="746" width="123" height="56"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="STATS">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="placeholderTextColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
+                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="huF-Fb-Hoi" kind="show" id="Ht4-V3-bfj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7j-qG-eaq">
+                                <rect key="frame" x="16" y="746" width="136.33333333333334" height="56"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="START!">
                                     <backgroundConfiguration key="background">
@@ -193,27 +206,16 @@
                                     <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RFY-fO-P0M"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vR6-ji-JVy">
-                                <rect key="frame" x="282" y="326" width="95" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="STATS">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" systemColor="placeholderTextColor"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
-                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="huF-Fb-Hoi" kind="show" id="Ht4-V3-bfj"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="RRR-zc-anJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="175-SS-ge9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="D7j-qG-eaq" secondAttribute="bottom" constant="16" id="6Nu-td-lpG"/>
+                            <constraint firstItem="D7j-qG-eaq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Ji4-0a-Glm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RRR-zc-anJ" secondAttribute="bottom" id="UHp-Y6-B6v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vR6-ji-JVy" secondAttribute="trailing" constant="16" id="WWq-wF-MpO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vR6-ji-JVy" secondAttribute="bottom" constant="16" id="cL4-Pv-WWS"/>
                             <constraint firstItem="RRR-zc-anJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="l1s-mb-KeQ"/>
                             <constraint firstItem="RRR-zc-anJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yRL-hb-hLN"/>
                         </constraints>
@@ -223,10 +225,6 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="bUC-NE-4hv">
                                 <rect key="frame" x="16" y="2" width="51" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Rip-BA-XTd"/>
-                                    <constraint firstAttribute="width" constant="40" id="mCg-z8-VkN"/>
-                                </constraints>
                                 <color key="tintColor" systemColor="opaqueSeparatorColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="line.3.horizontal" catalog="system"/>
