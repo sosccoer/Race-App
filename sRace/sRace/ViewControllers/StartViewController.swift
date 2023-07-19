@@ -15,6 +15,7 @@ class StartViewController: UIViewController {
     var carImage = UIImageView(image: UIImage(named: "car"))
     var treeImage = UIImageView(image: UIImage(named: "tree"))
     var pitImage = UIImageView(image: UIImage(named: "pit"))
+    var roadImage = UIImageView(image: UIImage(named: "RoadForsRace"))
     
     var screenHeight: CGFloat = 0
     var screenWidth:CGFloat = 0
@@ -40,6 +41,7 @@ class StartViewController: UIViewController {
         view.addGestureRecognizer(lSwipe)
         view.addGestureRecognizer(rSwipe)
         
+
         
     }
     
@@ -48,7 +50,7 @@ class StartViewController: UIViewController {
         
         setupCoorditates()
         setupFrames()
-        
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -71,18 +73,22 @@ class StartViewController: UIViewController {
         
         screenHeight = view.frame.size.height
         let bottomPanding = UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 0
+        let topPanding = UIApplication.shared.windows.first?.safeAreaInsets.top ?? 0
         let yCoordinateOfCar = screenHeight - bottomPanding - defaultPadding - elementSize
         let yCoordinateOfTree = screenHeight - bottomPanding - defaultPadding * 4 - elementSize * 3
         let yCoordinateOfPit = yCoordinateOfTree - elementSize - defaultPadding
         
         SegmentController.selectedSegmentIndex = 1
         
-        carImage.frame = CGRect(x: centreOriginCoordinate, y: yCoordinateOfCar, width: elementSize, height: elementSize)
+        carImage.frame = CGRect(x: centreOriginCoordinate, y: yCoordinateOfCar, width: elementSize, height: elementSize  )
         
-        treeImage.frame = CGRect(x: leftOriginCoordinate, y: yCoordinateOfTree, width: elementSize, height: elementSize)
+        treeImage.frame = CGRect(x: leftOriginCoordinate , y: yCoordinateOfTree, width: elementSize , height: elementSize)
         
         pitImage.frame = CGRect(x: rightOriginCoordinate, y: yCoordinateOfPit, width: elementSize, height: elementSize)
         
+        roadImage.frame = CGRect(x: 0, y: topPanding, width: screenWidth, height: screenHeight - topPanding - bottomPanding)
+        
+        view.addSubview(roadImage)
         view.addSubview(carImage)
         view.addSubview(treeImage)
         view.addSubview(pitImage)
