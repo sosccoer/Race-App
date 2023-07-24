@@ -20,6 +20,17 @@ class StartViewController: UIViewController {
     var screenHeight: CGFloat = 0
     var screenWidth:CGFloat = 0
     
+    let treeTopSpacing: CGFloat = 200
+    let rockTopSpacing: CGFloat = 50
+    let pitTopSpacing: CGFloat = 500
+    let treeBottomSpacing: CGFloat = 700
+    let rockBottomSpacing: CGFloat = 200
+    let pitBottomSpacing: CGFloat = 300
+    
+    let obstaclesSpeed: CGFloat = 250
+    
+    
+    
     var elementSize: CGFloat = 0
     var leftOriginCoordinate: CGFloat = 0
     var rightOriginCoordinate: CGFloat = 0
@@ -138,17 +149,28 @@ class StartViewController: UIViewController {
     
     func animateObstacles() {
         
-        UIView.animate(withDuration: 5, delay: 0, options: [.curveLinear,.repeat]) { [weak self] in
+        let treeS = screenHeight + treeTopSpacing + treeBottomSpacing
+        let rockS = screenHeight + rockTopSpacing + rockBottomSpacing
+        let pitS = screenHeight + pitTopSpacing + pitBottomSpacing
+        
+        var treeT = treeS / obstaclesSpeed
+        var rockT = treeS / obstaclesSpeed
+        var pitT = pitS / obstaclesSpeed
+        
+        
+        
+        
+        UIView.animate(withDuration: treeT, delay: 0, options: [.curveLinear,.repeat]) { [weak self] in
             self?.treeImage.frame.origin.y = self?.screenHeight ?? 0
         }
         
-        UIView.animate(withDuration: 5, delay: 0,options: [.curveLinear,.repeat] ) { [weak self] in
+        UIView.animate(withDuration: pitT, delay: 0,options: [.curveLinear,.repeat] ) { [weak self] in
             
             self?.pitImage.frame.origin.y = self?.screenHeight ?? 0
             
         }
         
-        UIView.animate(withDuration: 7.5, delay: 0,options: [.curveLinear,.repeat]) { [weak self] in
+        UIView.animate(withDuration: rockT, delay: 0,options: [.curveLinear,.repeat]) { [weak self] in
             self?.rockImage.frame.origin.y = self?.screenHeight ?? 0
             
         }
