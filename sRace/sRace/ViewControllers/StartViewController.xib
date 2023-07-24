@@ -10,7 +10,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartViewController" customModule="sRace" customModuleProvider="target">
             <connections>
-                <outlet property="SegmentController" destination="7GT-Xa-fth" id="fvb-bw-lJ3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,25 +17,8 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7GT-Xa-fth">
-                    <rect key="frame" x="105.66666666666669" y="771" width="182" height="32"/>
-                    <segments>
-                        <segment title="Left"/>
-                        <segment title="Centre"/>
-                        <segment title="Right"/>
-                    </segments>
-                    <connections>
-                        <action selector="changeCarPosition:" destination="-1" eventType="valueChanged" id="RVn-qC-Jp5"/>
-                    </connections>
-                </segmentedControl>
-            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <constraints>
-                <constraint firstItem="7GT-Xa-fth" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rqA-ig-KC0"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7GT-Xa-fth" secondAttribute="bottom" constant="16" id="vGe-eD-oAA"/>
-            </constraints>
             <point key="canvasLocation" x="140" y="21"/>
         </view>
     </objects>

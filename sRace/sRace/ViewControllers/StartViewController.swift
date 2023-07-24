@@ -8,15 +8,15 @@
 import UIKit
 
 class StartViewController: UIViewController {
-    
-    @IBOutlet weak var SegmentController: UISegmentedControl!
-    
-    
+        
+    // MARK: - Images
     var carImage = UIImageView(image: UIImage(named: "car"))
     var treeImage = UIImageView(image: UIImage(named: "tree"))
     var pitImage = UIImageView(image: UIImage(named: "pit"))
+    var rockImage = UIImageView(image: UIImage(named: "Rock"))
     var roadImage = UIImageView(image: UIImage(named: "RoadForsRace"))
     
+    //MARK: - Coordinates
     var screenHeight: CGFloat = 0
     var screenWidth:CGFloat = 0
     
@@ -41,20 +41,16 @@ class StartViewController: UIViewController {
         view.addGestureRecognizer(lSwipe)
         view.addGestureRecognizer(rSwipe)
         
-
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         setupCoorditates()
         setupFrames()
-
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        changeCarPosition(SegmentController)
+        animateObstacles()
     }
     
     func setupCoorditates () {
@@ -75,51 +71,25 @@ class StartViewController: UIViewController {
         let bottomPanding = UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 0
         let topPanding = UIApplication.shared.windows.first?.safeAreaInsets.top ?? 0
         let yCoordinateOfCar = screenHeight - bottomPanding - defaultPadding - elementSize
-        let yCoordinateOfTree = screenHeight - bottomPanding - defaultPadding * 4 - elementSize * 3
-        let yCoordinateOfPit = yCoordinateOfTree - elementSize - defaultPadding
-        
-        SegmentController.selectedSegmentIndex = 1
-        
+        let yCoordinateOfTree = -elementSize
+        let yCoordinateOfPit = -elementSize
+        let yCoordinateOfRock = -elementSize - (screenHeight / 2)
+                
+        rockImage.frame = CGRect(x: centreOriginCoordinate, y: yCoordinateOfRock, width: elementSize, height: elementSize)
         carImage.frame = CGRect(x: centreOriginCoordinate, y: yCoordinateOfCar, width: elementSize, height: elementSize  )
-        
         treeImage.frame = CGRect(x: leftOriginCoordinate , y: yCoordinateOfTree, width: elementSize , height: elementSize)
-        
         pitImage.frame = CGRect(x: rightOriginCoordinate, y: yCoordinateOfPit, width: elementSize, height: elementSize)
-        
         roadImage.frame = CGRect(x: 0, y: topPanding, width: screenWidth, height: screenHeight - topPanding)
         
         view.addSubview(roadImage)
         view.addSubview(carImage)
         view.addSubview(treeImage)
         view.addSubview(pitImage)
-        
-    }
-    @IBAction func changeCarPosition(_ sender: UISegmentedControl) {
-        
-        switch sender.selectedSegmentIndex {
-            
-        case 0: UIView.animate(withDuration: 1) { [weak self] in
-            self?.carImage.frame.origin.x = self?.leftOriginCoordinate ?? 0
-            self?.pitImage.frame.origin.x = self?.leftOriginCoordinate ?? 0
-            self?.treeImage.frame.origin.x = self?.rightOriginCoordinate ?? 0
-        }
-        case 1:UIView.animate(withDuration: 1) { [weak self] in
-            self?.carImage.frame.origin.x = self?.centreOriginCoordinate ?? 0
-            self?.pitImage.frame.origin.x = self?.rightOriginCoordinate ?? 0
-            self?.treeImage.frame.origin.x = self?.leftOriginCoordinate ?? 0
-        }
-            
-        case 2 :UIView.animate(withDuration: 1) { [weak self] in
-            self?.carImage.frame.origin.x = self?.rightOriginCoordinate ?? 0
-            self?.pitImage.frame.origin.x = self?.centreOriginCoordinate ?? 0
-            self?.treeImage.frame.origin.x = self?.rightOriginCoordinate ?? 0
-        }
-        default : return
-            
-        }
+        view.addSubview(rockImage)
         
     }
     
+    // MARK: - Swipe
     @objc func swipe (sender: UISwipeGestureRecognizer) {
         
         switch sender.direction {
@@ -129,46 +99,60 @@ class StartViewController: UIViewController {
             
         default : break
             
-            
         }
+    }
+    
+    func left (image:UIImageView) {
         
-        func left (image:UIImageView) {
+        UIView.animate(withDuration: 1) { [weak self] in
             
-            UIView.animate(withDuration: 1) { [weak self] in
+            if image.frame.origin.x == self?.rightOriginCoordinate {
                 
-                if image.frame.origin.x == self?.rightOriginCoordinate {
-                    
-                    image.frame.origin.x = self?.centreOriginCoordinate ?? 0
-                    
-                }else if image.frame.origin.x == self?.centreOriginCoordinate{
-                    image.frame.origin.x = self?.leftOriginCoordinate ?? 0
-                }else {
-                    image.frame.origin.x = self?.leftOriginCoordinate ?? 0
-                }
+                image.frame.origin.x = self?.centreOriginCoordinate ?? 0
                 
+            }else if image.frame.origin.x == self?.centreOriginCoordinate{
+                image.frame.origin.x = self?.leftOriginCoordinate ?? 0
+            }else {
+                image.frame.origin.x = self?.leftOriginCoordinate ?? 0
             }
-                
         }
+    }
+    
+    func right(image:UIImageView) {
         
-        func right(image:UIImageView) {
+        UIView.animate(withDuration: 1) { [weak self] in
             
-            UIView.animate(withDuration: 1) { [weak self] in
+            if image.frame.origin.x == self?.rightOriginCoordinate {
                 
-                if image.frame.origin.x == self?.rightOriginCoordinate {
-                    
-                    image.frame.origin.x = self?.rightOriginCoordinate ?? 0
-                    
-                }else if image.frame.origin.x == self?.centreOriginCoordinate{
-                    image.frame.origin.x = self?.rightOriginCoordinate ?? 0
-                }else {
-                    image.frame.origin.x = self?.centreOriginCoordinate ?? 0
-                }
+                image.frame.origin.x = self?.rightOriginCoordinate ?? 0
                 
+            }else if image.frame.origin.x == self?.centreOriginCoordinate{
+                image.frame.origin.x = self?.rightOriginCoordinate ?? 0
+            }else {
+                image.frame.origin.x = self?.centreOriginCoordinate ?? 0
             }
-                
+        }
+    }
+    
+    // MARK: - Animate Obstacles
+    
+    func animateObstacles() {
+        
+        UIView.animate(withDuration: 5, delay: 0, options: [.curveLinear,.repeat]) { [weak self] in
+            self?.treeImage.frame.origin.y = self?.screenHeight ?? 0
         }
         
+        UIView.animate(withDuration: 5, delay: 0,options: [.curveLinear,.repeat] ) { [weak self] in
+            
+            self?.pitImage.frame.origin.y = self?.screenHeight ?? 0
+            
+        }
         
+        UIView.animate(withDuration: 7.5, delay: 0,options: [.curveLinear,.repeat]) { [weak self] in
+            self?.rockImage.frame.origin.y = self?.screenHeight ?? 0
+            
+        }
         
     }
+    
 }
