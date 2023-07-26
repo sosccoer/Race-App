@@ -25,6 +25,9 @@
 		7D1999E02A70ACA900DC3F6B /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7D1999DF2A70ACA900DC3F6B /* Lottie */; };
 		7D1999E22A70AE1E00DC3F6B /* SideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1999E12A70AE1E00DC3F6B /* SideViewController.swift */; };
 		7D1999E62A715C4E00DC3F6B /* raceCar.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D1999E52A715C4E00DC3F6B /* raceCar.json */; };
+		7D1999E92A71642100DC3F6B /* RegularTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1999E72A71642100DC3F6B /* RegularTableViewCell.swift */; };
+		7D1999EA2A71642100DC3F6B /* RegularTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D1999E82A71642100DC3F6B /* RegularTableViewCell.xib */; };
+		7D1999EC2A7168FE00DC3F6B /* StatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1999EB2A7168FE00DC3F6B /* StatsModel.swift */; };
 		7D3237332A632C5500476039 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3237312A632C5500476039 /* StartViewController.swift */; };
 		7D3237342A632C5500476039 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D3237322A632C5500476039 /* StartViewController.xib */; };
 		7D32373F2A681F9E00476039 /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D32373D2A681F9E00476039 /* PhotoTableViewCell.swift */; };
@@ -53,6 +56,9 @@
 		7D1999D92A709F7400DC3F6B /* NickNameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NickNameTableViewCell.xib; sourceTree = "<group>"; };
 		7D1999E12A70AE1E00DC3F6B /* SideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideViewController.swift; sourceTree = "<group>"; };
 		7D1999E52A715C4E00DC3F6B /* raceCar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = raceCar.json; sourceTree = "<group>"; };
+		7D1999E72A71642100DC3F6B /* RegularTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularTableViewCell.swift; sourceTree = "<group>"; };
+		7D1999E82A71642100DC3F6B /* RegularTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegularTableViewCell.xib; sourceTree = "<group>"; };
+		7D1999EB2A7168FE00DC3F6B /* StatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsModel.swift; sourceTree = "<group>"; };
 		7D3237312A632C5500476039 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		7D3237322A632C5500476039 /* StartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
 		7D32373D2A681F9E00476039 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
@@ -152,8 +158,8 @@
 		7D3237352A68073500476039 /* Cells for settings */ = {
 			isa = PBXGroup;
 			children = (
-				7D1999D72A709F3A00DC3F6B /* NickName cell */,
 				7D0D58562A5C4F2800281153 /* FeedItem.swift */,
+				7D1999D72A709F3A00DC3F6B /* NickName cell */,
 				7D0D584C2A5C412B00281153 /* SettingCell */,
 				7D0D58512A5C47CB00281153 /* openSettings */,
 			);
@@ -166,6 +172,7 @@
 				7D3237382A681E8000476039 /* Regular Cells */,
 				7D3237372A681E6100476039 /* Cells with photo */,
 				7D3237412A6822D600476039 /* ManagerOfStatsCells.swift */,
+				7D1999EB2A7168FE00DC3F6B /* StatsModel.swift */,
 			);
 			path = "Cells for stats";
 			sourceTree = "<group>";
@@ -182,6 +189,8 @@
 		7D3237382A681E8000476039 /* Regular Cells */ = {
 			isa = PBXGroup;
 			children = (
+				7D1999E72A71642100DC3F6B /* RegularTableViewCell.swift */,
+				7D1999E82A71642100DC3F6B /* RegularTableViewCell.xib */,
 			);
 			path = "Regular Cells";
 			sourceTree = "<group>";
@@ -272,6 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D1999EA2A71642100DC3F6B /* RegularTableViewCell.xib in Resources */,
 				7D1999E62A715C4E00DC3F6B /* raceCar.json in Resources */,
 				7D0D583B2A59DEBE00281153 /* LaunchScreen.storyboard in Resources */,
 				7D0D58532A5C47E500281153 /* OpenSetting.xib in Resources */,
@@ -292,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D1999DA2A709F7400DC3F6B /* NickNameTableViewCell.swift in Sources */,
+				7D1999E92A71642100DC3F6B /* RegularTableViewCell.swift in Sources */,
 				7D3237422A6822D600476039 /* ManagerOfStatsCells.swift in Sources */,
 				7D32373F2A681F9E00476039 /* PhotoTableViewCell.swift in Sources */,
 				7D773B432A5E1F9E005C9573 /* SettingManager.swift in Sources */,
@@ -301,6 +312,7 @@
 				7D0D58552A5C47F300281153 /* OpenSetting.swift in Sources */,
 				7D0D58312A59DEBC00281153 /* SceneDelegate.swift in Sources */,
 				7D3237332A632C5500476039 /* StartViewController.swift in Sources */,
+				7D1999EC2A7168FE00DC3F6B /* StatsModel.swift in Sources */,
 				7D0D584A2A5C3D9F00281153 /* SettingsViewController.swift in Sources */,
 				7D0D58572A5C4F2800281153 /* FeedItem.swift in Sources */,
 				7D0D58502A5C428500281153 /* Settings.swift in Sources */,
