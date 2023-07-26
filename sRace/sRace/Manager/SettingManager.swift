@@ -14,21 +14,14 @@ class SettingsClass {
     
     var initialSettings: [TypeOfCell] = [
         
+        TypeOfCell(type: .nickNameCell, text: "Алексей"),
         TypeOfCell(type: .switchCell, text: "Тени", switcher: true),
-        TypeOfCell(type: .openCell, text: "Графика", switcher: false),
+        TypeOfCell(type: .openCell, text: "Графика"),
+        TypeOfCell(type: .openCell, text: "Никнейм"),
         TypeOfCell(type: .switchCell, text: "Звук", switcher: false),
-        TypeOfCell(type: .openCell, text: "Улучшения", switcher: false)
+        TypeOfCell(type: .openCell, text: "Улучшения")
         
     ]
     
-    var settings: [TypeOfCell] = []
-    var newSettings: [TypeOfCell] = []
-    
-    func saveSettings () {
-        
-        newSettings = settings
-        settings = newSettings
-        
-    }
-    
+   
 }

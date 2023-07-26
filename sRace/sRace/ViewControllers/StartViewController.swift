@@ -16,16 +16,20 @@ class StartViewController: UIViewController {
     var rockImage = UIImageView(image: UIImage(named: "Rock"))
     var roadImage = UIImageView(image: UIImage(named: "RoadForsRace"))
     
-    //MARK: - Coordinates
+    // MARK: - Coordinates
     var screenHeight: CGFloat = 0
     var screenWidth:CGFloat = 0
     
-    let treeTopSpacing: CGFloat = 200
-    let rockTopSpacing: CGFloat = 50
+    let treeTopSpacing: CGFloat = 700
+    let rockTopSpacing: CGFloat = 800
     let pitTopSpacing: CGFloat = 500
-    let treeBottomSpacing: CGFloat = 700
-    let rockBottomSpacing: CGFloat = 200
-    let pitBottomSpacing: CGFloat = 300
+    let treeBottomSpacing: CGFloat = 250
+    let rockBottomSpacing: CGFloat = 400
+    let pitBottomSpacing: CGFloat = 200
+    
+    // pit - 700
+    // rock - 1400
+    // tree - 950
     
     let obstaclesSpeed: CGFloat = 250
     
@@ -153,25 +157,25 @@ class StartViewController: UIViewController {
         let rockS = screenHeight + rockTopSpacing + rockBottomSpacing
         let pitS = screenHeight + pitTopSpacing + pitBottomSpacing
         
-        var treeT = treeS / obstaclesSpeed
-        var rockT = treeS / obstaclesSpeed
-        var pitT = pitS / obstaclesSpeed
+        let treeT = treeS / obstaclesSpeed
+        let rockT = rockS / obstaclesSpeed
+        let pitT = pitS / obstaclesSpeed
         
         
         
         
         UIView.animate(withDuration: treeT, delay: 0, options: [.curveLinear,.repeat]) { [weak self] in
-            self?.treeImage.frame.origin.y = self?.screenHeight ?? 0
+            self?.treeImage.frame.origin.y = treeS
         }
         
         UIView.animate(withDuration: pitT, delay: 0,options: [.curveLinear,.repeat] ) { [weak self] in
             
-            self?.pitImage.frame.origin.y = self?.screenHeight ?? 0
+            self?.pitImage.frame.origin.y = pitS
             
         }
         
         UIView.animate(withDuration: rockT, delay: 0,options: [.curveLinear,.repeat]) { [weak self] in
-            self?.rockImage.frame.origin.y = self?.screenHeight ?? 0
+            self?.rockImage.frame.origin.y = rockS
             
         }
         

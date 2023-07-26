@@ -24,28 +24,33 @@
             </objects>
             <point key="canvasLocation" x="-1204" y="-12"/>
         </scene>
-        <!--View Controller-->
+        <!--Side View Controller-->
         <scene sceneID="WpJ-Ig-IwD">
             <objects>
-                <viewController id="A5X-7i-EEA" sceneMemberID="viewController">
+                <viewController id="A5X-7i-EEA" customClass="SideViewController" customModule="sRace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NKW-QF-AtN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Side menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6V-wn-nIv">
-                                <rect key="frame" x="16" y="16" width="159" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="if3-rM-ytN">
+                                <rect key="frame" x="16" y="120" width="361" height="361"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="361" id="JrI-wO-37R"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fcZ-Lz-Kza"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Q6V-wn-nIv" firstAttribute="top" secondItem="fcZ-Lz-Kza" secondAttribute="top" constant="16" id="B48-EH-MIO"/>
-                            <constraint firstItem="Q6V-wn-nIv" firstAttribute="leading" secondItem="fcZ-Lz-Kza" secondAttribute="leading" constant="16" id="UrO-wv-Dio"/>
+                            <constraint firstItem="fcZ-Lz-Kza" firstAttribute="trailing" secondItem="if3-rM-ytN" secondAttribute="trailing" constant="16" id="NhY-Vz-ymE"/>
+                            <constraint firstItem="if3-rM-ytN" firstAttribute="top" secondItem="fcZ-Lz-Kza" secondAttribute="top" constant="120" id="VUH-nZ-9Y2"/>
+                            <constraint firstItem="if3-rM-ytN" firstAttribute="leading" secondItem="fcZ-Lz-Kza" secondAttribute="leading" constant="16" id="evk-eX-tQx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="animatedContainerView" destination="if3-rM-ytN" id="1rR-bs-Wm3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="poS-0A-jMj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -72,7 +77,7 @@
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="SaveChanges:" destination="O5A-pk-lTy" eventType="touchUpInside" id="CuO-nv-YhO"/>
+                                            <action selector="saveChanges:" destination="O5A-pk-lTy" eventType="touchUpInside" id="ChU-2U-aOU"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPF-fy-rXv">
@@ -84,6 +89,9 @@
                                             </backgroundConfiguration>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="cancelChanges:" destination="O5A-pk-lTy" eventType="touchUpInside" id="YQQ-pc-sB2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -250,6 +258,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-335.1145038167939" y="-13.380281690140846"/>
+        </scene>
+        <!--Nick Name View Controller-->
+        <scene sceneID="mJd-1x-m9c">
+            <objects>
+                <viewController storyboardIdentifier="NickNameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="umL-RB-wh8" customClass="NickNameViewController" customModule="sRace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i5N-qc-rW0">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="e6t-Ta-AhV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bw5-7l-b4K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="447" y="-13"/>
         </scene>
     </scenes>
     <resources>

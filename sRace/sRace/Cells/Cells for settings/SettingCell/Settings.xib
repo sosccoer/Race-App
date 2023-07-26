@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="56" id="dIT-lU-jht" customClass="Settings" customModule="sRace" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Settings" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="56" id="dIT-lU-jht" customClass="Settings" customModule="sRace" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="390" height="56"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dIT-lU-jht" id="aGt-Dg-fl9">
@@ -18,7 +18,7 @@
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qgN-b7-OGx">
                         <rect key="frame" x="16" y="16" width="358" height="29"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K42-v3-cFQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="settings" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K42-v3-cFQ">
                                 <rect key="frame" x="0.0" y="0.0" width="292" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -30,6 +30,9 @@
                                     <constraint firstAttribute="width" constant="50" id="5xf-px-jS4"/>
                                     <constraint firstAttribute="height" constant="29" id="Ci2-3U-OLM"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="switchChnged:" destination="dIT-lU-jht" eventType="valueChanged" id="v3d-PD-d5e"/>
+                                </connections>
                             </switch>
                         </subviews>
                         <constraints>

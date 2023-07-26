@@ -12,20 +12,14 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet private var TableView: UITableView!
     
+    var items = SettingsClass.sharedInfo.initialSettings
+    lazy var settings: [TypeOfCell] = items
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fillDefaultValues()
+        setupTable()
         
-        TableView.dataSource = self
-        let switchNib = UINib(nibName: "Settings", bundle: nil)
-        TableView.register(switchNib, forCellReuseIdentifier: "Settings")
-        let openNib = UINib(nibName: "OpenSetting", bundle: nil)
-        TableView.register(openNib, forCellReuseIdentifier: "OpenSetting")
-        
-        TableView.delegate = self
-        TableView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,62 +27,86 @@ class SettingsViewController: UIViewController {
         
     }
     
-    
-    
-    
-    
-    
-    
-    private var items = SettingsClass.sharedInfo.settings
-    
-    
-    
-    private func fillDefaultValues () {
+    private func setupTable() {
+        registerCells()
         
-        items = SettingsClass.sharedInfo.initialSettings
-        
+        TableView.delegate = self
+        TableView.dataSource = self
     }
     
-    func updateSetting () {
+    private func registerCells() {
+        let switchNib = UINib(nibName: "Settings", bundle: Bundle.main)
+        TableView.register(switchNib, forCellReuseIdentifier: "Settings")
         
-        items = SettingsClass.sharedInfo.settings
+        let openNib = UINib(nibName: "OpenSetting", bundle: Bundle.main)
+        TableView.register(openNib, forCellReuseIdentifier: "OpenSetting")
         
+        let NickNib = UINib(nibName: "NickNameTableViewCell", bundle: Bundle.main)
+        TableView.register(NickNib, forCellReuseIdentifier: "NickName")
     }
     
-    @IBAction func SaveChanges(_ sender: UIButton) {
-        
-        SettingsClass.sharedInfo.saveSettings()
+    
+    @IBAction func saveChanges(_ sender: Any) {
+        items = settings
+        SettingsClass.sharedInfo.initialSettings = settings
         TableView.reloadData()
     }
+    
+    @IBAction func cancelChanges (_ sender: Any) {
+        settings = items
+        TableView.reloadData()
+    }
+    
     
 }
 
 extension SettingsViewController: UITableViewDataSource,UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return settings.count
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        5
-    }
+    func numberOfSections(in tableView: UITableView) -> Int {1}
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let index = indexPath.row
         
-        let item = items[indexPath.row]
-        
-        switch item.type {
-        case .openCell : let cell = tableView.dequeueReusableCell(withIdentifier: "OpenSetting"  , for: indexPath) as! OpenSetting
-            cell.configure(with: item.text)
-            return cell
-        case .switchCell : let cell = tableView.dequeueReusableCell(withIdentifier: "Settings", for: indexPath) as! Settings
-            cell.configure(with: item.text)
-            cell.switcher.isOn = (items[index].switcher as? Bool) ?? false
+        switch settings[index].type {
+        case .openCell : let cell = tableView.dequeueReusableCell(withIdentifier: "OpenSetting", for: indexPath) as! OpenSetting
+            
+            cell.nameLabel.text = settings[index].text
             return cell
             
+        case .switchCell : let cell = tableView.dequeueReusableCell(withIdentifier: "Settings", for: indexPath) as! Settings
+            cell.infoLabel.text = settings[index].text
+            cell.switcher.isOn = (settings[index].switcher as? Bool) ?? false
+            cell.delegate = self
+            return cell
+            
+        case .nickNameCell: let cell = tableView.dequeueReusableCell(withIdentifier: "NickName", for: indexPath) as! NickNameTableViewCell
+            cell.nickName.text = settings[index].text
+            return cell 
         }
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let viewController = self.storyboard?.instantiateViewController(withIdentifier: "NickNameViewController") as! NickNameViewController
+        switch settings[indexPath.row].type {
+        case .nickNameCell : show(viewController, sender: self)
+        default: return
+        }
+        
+    }
+    
+}
+
+extension SettingsViewController: SettingDelegate {
+    func cell(_ cell: Settings, changeValueTo isOn: Bool) {
+        guard let index = TableView.indexPath(for: cell)?.row else { return }
+        settings[index].switcher = isOn
+        cell.delegate = self
     }
     
 }

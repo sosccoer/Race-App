@@ -19,6 +19,12 @@
 		7D0D58532A5C47E500281153 /* OpenSetting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D0D58522A5C47E500281153 /* OpenSetting.xib */; };
 		7D0D58552A5C47F300281153 /* OpenSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0D58542A5C47F300281153 /* OpenSetting.swift */; };
 		7D0D58572A5C4F2800281153 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0D58562A5C4F2800281153 /* FeedItem.swift */; };
+		7D1999D62A708FBF00DC3F6B /* NickNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1999D52A708FBF00DC3F6B /* NickNameViewController.swift */; };
+		7D1999DA2A709F7400DC3F6B /* NickNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1999D82A709F7400DC3F6B /* NickNameTableViewCell.swift */; };
+		7D1999DB2A709F7400DC3F6B /* NickNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D1999D92A709F7400DC3F6B /* NickNameTableViewCell.xib */; };
+		7D1999E02A70ACA900DC3F6B /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7D1999DF2A70ACA900DC3F6B /* Lottie */; };
+		7D1999E22A70AE1E00DC3F6B /* SideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1999E12A70AE1E00DC3F6B /* SideViewController.swift */; };
+		7D1999E42A70B08500DC3F6B /* animation_lkj22mb7.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D1999E32A70B08500DC3F6B /* animation_lkj22mb7.json */; };
 		7D3237332A632C5500476039 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3237312A632C5500476039 /* StartViewController.swift */; };
 		7D3237342A632C5500476039 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D3237322A632C5500476039 /* StartViewController.xib */; };
 		7D32373F2A681F9E00476039 /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D32373D2A681F9E00476039 /* PhotoTableViewCell.swift */; };
@@ -42,6 +48,11 @@
 		7D0D58522A5C47E500281153 /* OpenSetting.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenSetting.xib; sourceTree = "<group>"; };
 		7D0D58542A5C47F300281153 /* OpenSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSetting.swift; sourceTree = "<group>"; };
 		7D0D58562A5C4F2800281153 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		7D1999D52A708FBF00DC3F6B /* NickNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameViewController.swift; sourceTree = "<group>"; };
+		7D1999D82A709F7400DC3F6B /* NickNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameTableViewCell.swift; sourceTree = "<group>"; };
+		7D1999D92A709F7400DC3F6B /* NickNameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NickNameTableViewCell.xib; sourceTree = "<group>"; };
+		7D1999E12A70AE1E00DC3F6B /* SideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideViewController.swift; sourceTree = "<group>"; };
+		7D1999E32A70B08500DC3F6B /* animation_lkj22mb7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = animation_lkj22mb7.json; path = ../../../animation_lkj22mb7.json; sourceTree = "<group>"; };
 		7D3237312A632C5500476039 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		7D3237322A632C5500476039 /* StartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
 		7D32373D2A681F9E00476039 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
@@ -55,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D1999E02A70ACA900DC3F6B /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +107,8 @@
 				7D0D58492A5C3D9F00281153 /* SettingsViewController.swift */,
 				7D3237312A632C5500476039 /* StartViewController.swift */,
 				7D3237322A632C5500476039 /* StartViewController.xib */,
+				7D1999D52A708FBF00DC3F6B /* NickNameViewController.swift */,
+				7D1999E12A70AE1E00DC3F6B /* SideViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -126,9 +140,19 @@
 			path = openSettings;
 			sourceTree = "<group>";
 		};
+		7D1999D72A709F3A00DC3F6B /* NickName cell */ = {
+			isa = PBXGroup;
+			children = (
+				7D1999D82A709F7400DC3F6B /* NickNameTableViewCell.swift */,
+				7D1999D92A709F7400DC3F6B /* NickNameTableViewCell.xib */,
+			);
+			path = "NickName cell";
+			sourceTree = "<group>";
+		};
 		7D3237352A68073500476039 /* Cells for settings */ = {
 			isa = PBXGroup;
 			children = (
+				7D1999D72A709F3A00DC3F6B /* NickName cell */,
 				7D0D58562A5C4F2800281153 /* FeedItem.swift */,
 				7D0D584C2A5C412B00281153 /* SettingCell */,
 				7D0D58512A5C47CB00281153 /* openSettings */,
@@ -165,6 +189,7 @@
 		7D773B3F2A5DD2BB005C9573 /* Resorces */ = {
 			isa = PBXGroup;
 			children = (
+				7D1999E32A70B08500DC3F6B /* animation_lkj22mb7.json */,
 				7D0D582E2A59DEBC00281153 /* AppDelegate.swift */,
 				7D0D58302A59DEBC00281153 /* SceneDelegate.swift */,
 				7D0D583C2A59DEBE00281153 /* Info.plist */,
@@ -199,6 +224,9 @@
 			dependencies = (
 			);
 			name = sRace;
+			packageProductDependencies = (
+				7D1999DF2A70ACA900DC3F6B /* Lottie */,
+			);
 			productName = sRace;
 			productReference = 7D0D582B2A59DEBC00281153 /* sRace.app */;
 			productType = "com.apple.product-type.application";
@@ -227,6 +255,9 @@
 				Base,
 			);
 			mainGroup = 7D0D58222A59DEBC00281153;
+			packageReferences = (
+				7D1999DE2A70ACA900DC3F6B /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
 			productRefGroup = 7D0D582C2A59DEBC00281153 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -243,7 +274,9 @@
 			files = (
 				7D0D583B2A59DEBE00281153 /* LaunchScreen.storyboard in Resources */,
 				7D0D58532A5C47E500281153 /* OpenSetting.xib in Resources */,
+				7D1999E42A70B08500DC3F6B /* animation_lkj22mb7.json in Resources */,
 				7D0D58382A59DEBE00281153 /* Assets.xcassets in Resources */,
+				7D1999DB2A709F7400DC3F6B /* NickNameTableViewCell.xib in Resources */,
 				7D0D584E2A5C415200281153 /* Settings.xib in Resources */,
 				7D0D58362A59DEBC00281153 /* Main.storyboard in Resources */,
 				7D3237342A632C5500476039 /* StartViewController.xib in Resources */,
@@ -258,10 +291,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D1999DA2A709F7400DC3F6B /* NickNameTableViewCell.swift in Sources */,
 				7D3237422A6822D600476039 /* ManagerOfStatsCells.swift in Sources */,
 				7D32373F2A681F9E00476039 /* PhotoTableViewCell.swift in Sources */,
 				7D773B432A5E1F9E005C9573 /* SettingManager.swift in Sources */,
 				7D0D58332A59DEBC00281153 /* ViewController.swift in Sources */,
+				7D1999D62A708FBF00DC3F6B /* NickNameViewController.swift in Sources */,
 				7D0D582F2A59DEBC00281153 /* AppDelegate.swift in Sources */,
 				7D0D58552A5C47F300281153 /* OpenSetting.swift in Sources */,
 				7D0D58312A59DEBC00281153 /* SceneDelegate.swift in Sources */,
@@ -269,6 +304,7 @@
 				7D0D584A2A5C3D9F00281153 /* SettingsViewController.swift in Sources */,
 				7D0D58572A5C4F2800281153 /* FeedItem.swift in Sources */,
 				7D0D58502A5C428500281153 /* Settings.swift in Sources */,
+				7D1999E22A70AE1E00DC3F6B /* SideViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +522,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7D1999DE2A70ACA900DC3F6B /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7D1999DF2A70ACA900DC3F6B /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D1999DE2A70ACA900DC3F6B /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7D0D58232A59DEBC00281153 /* Project object */;
 }
