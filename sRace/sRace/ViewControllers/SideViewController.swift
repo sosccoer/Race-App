@@ -18,7 +18,7 @@ class SideViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        animationView = .init(name: "animation_lkj22mb7")
+        animationView = .init(name: "raceCar")
         animationView.frame = animatedContainerView.bounds
         animationView.contentMode = .scaleAspectFit
         animationView.loopMode = .loop
