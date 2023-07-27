@@ -136,7 +136,7 @@
         <!--Stats-->
         <scene sceneID="zMa-ff-ybf">
             <objects>
-                <viewController id="huF-Fb-Hoi" sceneMemberID="viewController">
+                <viewController id="huF-Fb-Hoi" customClass="StatsViewController" customModule="sRace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="45r-kw-gYc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -170,6 +170,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Stats" id="eOa-3E-0eK"/>
+                    <connections>
+                        <outlet property="TableView" destination="q7q-FN-xoS" id="sIo-tG-9uB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0uq-lo-a1O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

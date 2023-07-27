@@ -16,11 +16,11 @@ class RegularTableViewCell: UITableViewCell {
     @IBOutlet weak var score: UILabel!
     
     
-    func fillValues (position: Int,name: String,scoreOfPlayer: Int){
+    func fillValues (position: String,name: String,scoreOfPlayer: String){
         
-        numberOfPosition.text = String(position)
+        numberOfPosition.text = position
         NickName.text = name
-        score.text = String(scoreOfPlayer)
+        score.text = scoreOfPlayer
         
     }
 }

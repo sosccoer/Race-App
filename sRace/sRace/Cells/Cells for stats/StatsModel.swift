@@ -11,8 +11,8 @@ import UIKit
 struct TypeOfStats {
 var typeOfCell: TypeCellForStats
 var nickName: String
-var score: Int
-var position: Int?
+var score: String
+var position: String?
 var imgOfMedal: UIImage?
 }
 
