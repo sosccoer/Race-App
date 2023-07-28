@@ -33,7 +33,6 @@
 		7D3237342A632C5500476039 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D3237322A632C5500476039 /* StartViewController.xib */; };
 		7D32373F2A681F9E00476039 /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D32373D2A681F9E00476039 /* PhotoTableViewCell.swift */; };
 		7D3237402A681F9E00476039 /* PhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D32373E2A681F9E00476039 /* PhotoTableViewCell.xib */; };
-		7D3237422A6822D600476039 /* ManagerOfStatsCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3237412A6822D600476039 /* ManagerOfStatsCells.swift */; };
 		7D773B432A5E1F9E005C9573 /* SettingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D773B422A5E1F9E005C9573 /* SettingManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,7 +64,6 @@
 		7D3237322A632C5500476039 /* StartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
 		7D32373D2A681F9E00476039 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
 		7D32373E2A681F9E00476039 /* PhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoTableViewCell.xib; sourceTree = "<group>"; };
-		7D3237412A6822D600476039 /* ManagerOfStatsCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerOfStatsCells.swift; sourceTree = "<group>"; };
 		7D773B422A5E1F9E005C9573 /* SettingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,7 +172,6 @@
 			children = (
 				7D3237382A681E8000476039 /* Regular Cells */,
 				7D3237372A681E6100476039 /* Cells with photo */,
-				7D3237412A6822D600476039 /* ManagerOfStatsCells.swift */,
 				7D1999EB2A7168FE00DC3F6B /* StatsModel.swift */,
 			);
 			path = "Cells for stats";
@@ -306,7 +303,6 @@
 			files = (
 				7D1999DA2A709F7400DC3F6B /* NickNameTableViewCell.swift in Sources */,
 				7D1999E92A71642100DC3F6B /* RegularTableViewCell.swift in Sources */,
-				7D3237422A6822D600476039 /* ManagerOfStatsCells.swift in Sources */,
 				7D32373F2A681F9E00476039 /* PhotoTableViewCell.swift in Sources */,
 				7D773B432A5E1F9E005C9573 /* SettingManager.swift in Sources */,
 				7D0D58332A59DEBC00281153 /* ViewController.swift in Sources */,

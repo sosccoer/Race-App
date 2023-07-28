@@ -25,11 +25,12 @@ class StatsViewController: UIViewController {
     }
     
     var stats:[TypeOfStats] = [
+        TypeOfStats(typeOfCell: .PhotoCell, nickName: "Yuliya Igorevna", score: "2225",imgOfMedal: UIImage(named: "gold")),
+        TypeOfStats(typeOfCell: .regullarCell,nickName: "Alex" ,score: "10000", position: "2"),
+        TypeOfStats(typeOfCell: .regullarCell, nickName: "Yuliya", score: "7000",position: "3"),
+        TypeOfStats(typeOfCell: .regullarCell, nickName: "Marina", score: "5000",position: "4"),
+        TypeOfStats(typeOfCell: .regullarCell, nickName: "Vladimir", score: "3000",position: "5"),
         
-        TypeOfStats(typeOfCell: .regullarCell,nickName: "Alex" ,score: "10000", position: "1"),
-        TypeOfStats(typeOfCell: .regullarCell, nickName: "Yuliya", score: "7000",position: "2"),
-        TypeOfStats(typeOfCell: .regullarCell, nickName: "Marina", score: "5000",position: "3"),
-        TypeOfStats(typeOfCell: .regullarCell, nickName: "Vladimir", score: "3000",position: "4")
 
     ]
 
@@ -62,6 +63,9 @@ extension StatsViewController: UITableViewDataSource{
         else  {
             
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoTableViewCell", for: indexPath) as? PhotoTableViewCell else {return UITableViewCell()}
+            cell.NameOfWiner.text = stats[index].nickName
+            cell.Score.text = "Score: \(stats[index].score)"
+            cell.imgOfMedal.image = stats[index].imgOfMedal
             return cell
         }
         
