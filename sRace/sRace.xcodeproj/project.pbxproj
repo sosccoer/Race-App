@@ -29,6 +29,7 @@
 		7D1999EA2A71642100DC3F6B /* RegularTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D1999E82A71642100DC3F6B /* RegularTableViewCell.xib */; };
 		7D1999EC2A7168FE00DC3F6B /* StatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1999EB2A7168FE00DC3F6B /* StatsModel.swift */; };
 		7D1999EE2A7196AB00DC3F6B /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1999ED2A7196AB00DC3F6B /* StatsViewController.swift */; };
+		7D1999F22A744C0F00DC3F6B /* StatsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1999F12A744C0F00DC3F6B /* StatsManager.swift */; };
 		7D3237332A632C5500476039 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3237312A632C5500476039 /* StartViewController.swift */; };
 		7D3237342A632C5500476039 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D3237322A632C5500476039 /* StartViewController.xib */; };
 		7D32373F2A681F9E00476039 /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D32373D2A681F9E00476039 /* PhotoTableViewCell.swift */; };
@@ -60,6 +61,7 @@
 		7D1999E82A71642100DC3F6B /* RegularTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegularTableViewCell.xib; sourceTree = "<group>"; };
 		7D1999EB2A7168FE00DC3F6B /* StatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsModel.swift; sourceTree = "<group>"; };
 		7D1999ED2A7196AB00DC3F6B /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		7D1999F12A744C0F00DC3F6B /* StatsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsManager.swift; sourceTree = "<group>"; };
 		7D3237312A632C5500476039 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		7D3237322A632C5500476039 /* StartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
 		7D32373D2A681F9E00476039 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				7D773B422A5E1F9E005C9573 /* SettingManager.swift */,
+				7D1999F12A744C0F00DC3F6B /* StatsManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				7D32373F2A681F9E00476039 /* PhotoTableViewCell.swift in Sources */,
 				7D773B432A5E1F9E005C9573 /* SettingManager.swift in Sources */,
 				7D0D58332A59DEBC00281153 /* ViewController.swift in Sources */,
+				7D1999F22A744C0F00DC3F6B /* StatsManager.swift in Sources */,
 				7D1999D62A708FBF00DC3F6B /* NickNameViewController.swift in Sources */,
 				7D0D582F2A59DEBC00281153 /* AppDelegate.swift in Sources */,
 				7D0D58552A5C47F300281153 /* OpenSetting.swift in Sources */,

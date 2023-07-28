@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 class StatsViewController: UIViewController {
 
@@ -24,17 +25,9 @@ class StatsViewController: UIViewController {
         TableView.register(RegularCell, forCellReuseIdentifier: "RegularTableViewCell")
     }
     
-    var stats:[TypeOfStats] = [
-        TypeOfStats(typeOfCell: .PhotoCell, nickName: "Yuliya Igorevna", score: "2225",imgOfMedal: UIImage(named: "gold")),
-        TypeOfStats(typeOfCell: .regullarCell,nickName: "Alex" ,score: "10000", position: "2"),
-        TypeOfStats(typeOfCell: .regullarCell, nickName: "Yuliya", score: "7000",position: "3"),
-        TypeOfStats(typeOfCell: .regullarCell, nickName: "Marina", score: "5000",position: "4"),
-        TypeOfStats(typeOfCell: .regullarCell, nickName: "Vladimir", score: "3000",position: "5"),
-        
-
-    ]
-
-}
+    var stats:[TypeOfStats] = StatsManager.shareInfo.previusStats
+    
+    }
 
 extension StatsViewController: UITableViewDataSource{
     
