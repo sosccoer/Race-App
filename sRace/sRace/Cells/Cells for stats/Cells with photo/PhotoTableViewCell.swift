@@ -11,20 +11,8 @@ class PhotoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var imgOfMedal: UIImageView!
     
-    
     @IBOutlet weak var NameOfWiner: UILabel!
     
-    
     @IBOutlet weak var Score: UILabel!
-    
-    
-    func fillValues (photo: UIImage,name: String,score: Int) {
-        
-        imgOfMedal.image = photo
-        NameOfWiner.text = name
-        Score.text = String(score)
-        
-        
-    }
     
 }

@@ -12,7 +12,6 @@ class StatsViewController: UIViewController {
 
     @IBOutlet weak var TableView: UITableView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,7 +26,10 @@ class StatsViewController: UIViewController {
     
     var stats:[TypeOfStats] = StatsManager.shareInfo.previusStats
     
+    @IBAction func resetButton(_ sender: Any) {
+        stats = []
     }
+}
 
 extension StatsViewController: UITableViewDataSource{
     
@@ -45,7 +47,8 @@ extension StatsViewController: UITableViewDataSource{
             
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "RegularTableViewCell", for: indexPath) as? RegularTableViewCell  else {return UITableViewCell()}
             
-            cell.numberOfPosition.text = stats[index].position
+            
+            cell.numberOfPosition.text = ("\(stats[index].position ?? 0)")
             cell.NickName.text = stats[index].nickName
             cell.score.text = "Score: \(stats[index].score)"
             

@@ -151,6 +151,9 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="resetButton:" destination="huF-Fb-Hoi" eventType="touchUpInside" id="3tP-eO-hAR"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="q7q-FN-xoS">
                                 <rect key="frame" x="0.0" y="103" width="393" height="633"/>
@@ -217,6 +220,14 @@
                                     <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RFY-fO-P0M"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSG-6z-UL2">
+                                <rect key="frame" x="131" y="197" width="131" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -257,6 +268,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="userNameLabel" destination="VSG-6z-UL2" id="wWI-Nk-W8D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -269,9 +283,35 @@
                     <view key="view" contentMode="scaleToFill" id="i5N-qc-rW0">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lad-pb-5Hc">
+                                <rect key="frame" x="16" y="747" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NickName:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2za-uk-TSa">
+                                <rect key="frame" x="16" y="797" width="361" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="e6t-Ta-AhV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="e6t-Ta-AhV" firstAttribute="bottom" secondItem="2za-uk-TSa" secondAttribute="bottom" id="RrP-zl-UWB"/>
+                            <constraint firstItem="e6t-Ta-AhV" firstAttribute="trailing" secondItem="Lad-pb-5Hc" secondAttribute="trailing" constant="16" id="SvJ-aL-zih"/>
+                            <constraint firstItem="2za-uk-TSa" firstAttribute="top" secondItem="Lad-pb-5Hc" secondAttribute="bottom" constant="16" id="XCw-Nv-vXu"/>
+                            <constraint firstItem="e6t-Ta-AhV" firstAttribute="trailing" secondItem="2za-uk-TSa" secondAttribute="trailing" constant="16" id="csx-dW-xiz"/>
+                            <constraint firstItem="2za-uk-TSa" firstAttribute="leading" secondItem="e6t-Ta-AhV" secondAttribute="leading" constant="16" id="oa7-h5-Uuh"/>
+                            <constraint firstItem="Lad-pb-5Hc" firstAttribute="leading" secondItem="e6t-Ta-AhV" secondAttribute="leading" constant="16" id="ytm-0L-pIK"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="RrP-zl-UWB" id="NWx-uh-TE1"/>
+                        <outlet property="nickNameLabel" destination="2za-uk-TSa" id="b2f-vg-HnS"/>
+                        <outlet property="nickNameTextField" destination="Lad-pb-5Hc" id="P5Q-bo-lmh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bw5-7l-b4K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -290,6 +330,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

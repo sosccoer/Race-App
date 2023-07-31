@@ -12,7 +12,7 @@ struct TypeOfStats {
 var typeOfCell: TypeCellForStats
 var nickName: String
 var score: String
-var position: String?
+var position: Int?
 var imgOfMedal: UIImage?
 }
 

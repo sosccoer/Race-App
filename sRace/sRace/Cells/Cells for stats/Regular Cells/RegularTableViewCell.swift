@@ -15,12 +15,4 @@ class RegularTableViewCell: UITableViewCell {
     
     @IBOutlet weak var score: UILabel!
     
-    
-    func fillValues (position: String,name: String,scoreOfPlayer: String){
-        
-        numberOfPosition.text = position
-        NickName.text = name
-        score.text = scoreOfPlayer
-        
-    }
 }

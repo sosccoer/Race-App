@@ -8,16 +8,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var userNameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+       
     }
-
+    
     @IBAction func startGame(_ sender: UIButton) {
         let destination = StartViewController()
         navigationController?.pushViewController(destination, animated: true)
     }
+    
     
     
 }
