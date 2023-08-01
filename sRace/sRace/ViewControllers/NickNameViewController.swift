@@ -8,21 +8,26 @@
 import UIKit
 
 class NickNameViewController: UIViewController {
-    
+
     @IBOutlet weak var nickNameTextField: UITextField!
-    
-    @IBOutlet weak var nickNameLabel: UILabel!
-    
+        
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var saveButton: UIButton!
+    
+    
+    var previousSettings = SettingsClass.sharedInfo.initialSettings
+    lazy var settings: [TypeOfCell] = previousSettings
+    
     
     let bottomConstraintConstant: CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         nickNameTextField.delegate = self
         
-        registerKeyboardNotifications()
+            registerKeyboardNotifications()
         
     }
     deinit {
@@ -45,40 +50,52 @@ class NickNameViewController: UIViewController {
         bottomConstraint.constant = bottomConstraintConstant + keyboardHeight
         view.layoutIfNeeded()
     }
-    
-    @objc
-    func keyboardWillHide(_ notification: Foundation.Notification) {
         
-        bottomConstraint.constant = bottomConstraintConstant
-        view.layoutIfNeeded()
-    }
+        @objc
+        func keyboardWillHide(_ notification: Foundation.Notification) {
+            
+            bottomConstraint.constant = bottomConstraintConstant
+            view.layoutIfNeeded()
+        }
     
     @objc
     func hideKeyboard() {
         view.endEditing(true)
     }
     
-    private func setNickName(_ text: String) {
-        
-        nickNameLabel.text = "NickName: \(text)"
-    }
     
+    @IBAction func savChanges(_ sender: Any) {
+        
+        
+        
+        previousSettings[0].text = nickNameTextField.text ?? ""
+        
+
+                NotificationCenter.default.post(
+                    name: NSNotification.Name("updateUserName"),
+                    object: nil,
+                    userInfo: ["Имя пользователя": settings[0].text]
+                )
+                
+            
+        
+        
+    }
+
 }
 
 extension NickNameViewController: UITextFieldDelegate{
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        
-        if textField == nickNameTextField {
-            setNickName(textField.text ?? "")
-        }
-    }
+   
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == nickNameTextField {
+         if textField == nickNameTextField {
             nickNameTextField.endEditing(true)
         }
         return true
     }
     
+    
+  
+
 }

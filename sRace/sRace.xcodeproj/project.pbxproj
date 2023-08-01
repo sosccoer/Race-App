@@ -100,6 +100,7 @@
 		7D0D582D2A59DEBC00281153 /* sRace */ = {
 			isa = PBXGroup;
 			children = (
+				7D8D2D892A79BBF400DFC7DA /* Models */,
 				7D773B412A5E1F7B005C9573 /* Manager */,
 				7D0D584B2A5C411600281153 /* Cells */,
 				7D0D58422A5C3C9700281153 /* ViewControllers */,
@@ -161,7 +162,6 @@
 		7D3237352A68073500476039 /* Cells for settings */ = {
 			isa = PBXGroup;
 			children = (
-				7D0D58562A5C4F2800281153 /* FeedItem.swift */,
 				7D1999D72A709F3A00DC3F6B /* NickName cell */,
 				7D0D584C2A5C412B00281153 /* SettingCell */,
 				7D0D58512A5C47CB00281153 /* openSettings */,
@@ -174,7 +174,6 @@
 			children = (
 				7D3237382A681E8000476039 /* Regular Cells */,
 				7D3237372A681E6100476039 /* Cells with photo */,
-				7D1999EB2A7168FE00DC3F6B /* StatsModel.swift */,
 			);
 			path = "Cells for stats";
 			sourceTree = "<group>";
@@ -218,6 +217,15 @@
 				7D1999F12A744C0F00DC3F6B /* StatsManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		7D8D2D892A79BBF400DFC7DA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7D1999EB2A7168FE00DC3F6B /* StatsModel.swift */,
+				7D0D58562A5C4F2800281153 /* FeedItem.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

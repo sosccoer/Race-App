@@ -11,7 +11,7 @@ struct TypeOfCell{
     
    var type: TypeCell
    var text: String
-    var switcher:Any?
+    var switcher:Any
     
 }
 
