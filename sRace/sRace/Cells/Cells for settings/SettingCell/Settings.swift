@@ -14,6 +14,5 @@ class Settings: UITableViewCell{
     
 }
 
-protocol SettingDelegate: AnyObject {
-    func cell (_ cell: Settings, changeValueTo isOn: Bool)
-}
+
+

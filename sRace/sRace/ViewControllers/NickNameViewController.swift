@@ -65,21 +65,13 @@ class NickNameViewController: UIViewController {
     
     
     @IBAction func savChanges(_ sender: Any) {
-        
-        
-        
-        previousSettings[0].text = nickNameTextField.text ?? ""
-        
-
-                NotificationCenter.default.post(
-                    name: NSNotification.Name("updateUserName"),
-                    object: nil,
-                    userInfo: ["Имя пользователя": settings[0].text]
-                )
+    
+        NotificationCenter.default.post(
+            name: NSNotification.Name("updateUserName"),
+            object: nil,
+            userInfo: ["Имя пользователя": nickNameTextField.text ?? ""]
+        )
                 
-            
-        
-        
     }
 
 }

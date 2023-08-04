@@ -14,10 +14,11 @@ class SettingsClass {
     
     var initialSettings: [TypeOfCell] = [
         
-        TypeOfCell(type: .nickNameCell, text: "Имя пользователя",switcher: ""),
+        
         TypeOfCell(type: .switchCell, text: "Тени", switcher: true),
         TypeOfCell(type: .openCell, text: "Графика",switcher: ""),
         TypeOfCell(type: .openCell, text: "Никнейм",switcher: ""),
+        TypeOfCell(type: .nickNameCell, text: "Имя пользователя",switcher: ""),
         TypeOfCell(type: .switchCell, text: "Звук", switcher: false),
         TypeOfCell(type: .openCell, text: "Улучшения",switcher: "")
         

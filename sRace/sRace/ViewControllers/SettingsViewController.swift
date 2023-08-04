@@ -19,8 +19,43 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         
         setupTable()
+        NotificationCenter.default.addObserver(
+            self,
+            selector:#selector(updateUserName(_:)),
+            name: NSNotification.Name("updateUserName"),
+            object: nil
+        )
         
     }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc
+    func updateUserName(_ notification: Notification) {
+        var username = "User"
+        if let newName = notification.userInfo?["Имя пользователя"] as? String {
+            username = newName
+        }
+        
+        
+        
+        for (index,value) in settings.enumerated() {
+            
+            if value.type == .nickNameCell{
+                settings[index].text = "Your name: \(username)!"
+               TableView.reloadData()
+            }
+            
+        }
+        
+        
+        
+        
+       
+         
+        }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -109,4 +144,8 @@ extension SettingsViewController: SettingDelegate {
         cell.delegate = self
     }
     
+}
+
+protocol SettingDelegate: AnyObject {
+    func cell (_ cell: Settings, changeValueTo isOn: Bool)
 }
