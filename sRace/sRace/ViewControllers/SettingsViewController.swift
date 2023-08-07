@@ -44,7 +44,7 @@ class SettingsViewController: UIViewController {
         for (index,value) in settings.enumerated() {
             
             if value.type == .nickNameCell{
-                settings[index].text = "Your name: \(username)!"
+                settings[index].text = "Your name: \(username)"
                TableView.reloadData()
             }
             

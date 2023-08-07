@@ -59,7 +59,7 @@
         <!--Settings-->
         <scene sceneID="RPE-MN-FuI">
             <objects>
-                <viewController id="O5A-pk-lTy" customClass="SettingsViewController" customModule="sRace" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="O5A-pk-lTy" customClass="SettingsViewController" customModule="sRace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5TF-jr-KMj">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -220,9 +220,8 @@
                                     <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RFY-fO-P0M"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoU-MC-ZsN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your nickName:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoU-MC-ZsN">
                                 <rect key="frame" x="104" y="207" width="185" height="30"/>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Ucs-DI-0DG"/>
                                     <constraint firstAttribute="width" constant="185" id="aHd-FA-hbc"/>

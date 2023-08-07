@@ -71,10 +71,12 @@ class NickNameViewController: UIViewController {
             object: nil,
             userInfo: ["Имя пользователя": nickNameTextField.text ?? ""]
         )
-                
+        
     }
-
+    
 }
+
+
 
 extension NickNameViewController: UITextFieldDelegate{
     
