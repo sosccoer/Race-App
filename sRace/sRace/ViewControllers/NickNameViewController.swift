@@ -72,6 +72,8 @@ class NickNameViewController: UIViewController {
             userInfo: ["Имя пользователя": nickNameTextField.text ?? ""]
         )
         
+        self.navigationController?.popViewController(animated: true)
+        
     }
     
 }

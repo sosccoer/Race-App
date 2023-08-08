@@ -39,23 +39,15 @@ class SettingsViewController: UIViewController {
             username = newName
         }
         
-        
-        
         for (index,value) in settings.enumerated() {
             
             if value.type == .nickNameCell{
                 settings[index].text = "Your name: \(username)"
-               TableView.reloadData()
+                TableView.reloadData()
             }
             
         }
-        
-        
-        
-        
-       
-         
-        }
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -121,7 +113,7 @@ extension SettingsViewController: UITableViewDataSource,UITableViewDelegate {
             
         case .nickNameCell: let cell = tableView.dequeueReusableCell(withIdentifier: "NickName", for: indexPath) as! NickNameTableViewCell
             cell.nickName.text = settings[index].text
-            return cell 
+            return cell
         }
         
     }

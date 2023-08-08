@@ -23,7 +23,6 @@ class SettingsClass {
         
     ]
     
-    var currentIndex: Int = 0
     
     
     
