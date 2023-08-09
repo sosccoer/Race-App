@@ -23,7 +23,6 @@
 		7D1999DA2A709F7400DC3F6B /* NickNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1999D82A709F7400DC3F6B /* NickNameTableViewCell.swift */; };
 		7D1999DB2A709F7400DC3F6B /* NickNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D1999D92A709F7400DC3F6B /* NickNameTableViewCell.xib */; };
 		7D1999E02A70ACA900DC3F6B /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7D1999DF2A70ACA900DC3F6B /* Lottie */; };
-		7D1999E22A70AE1E00DC3F6B /* SideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1999E12A70AE1E00DC3F6B /* SideViewController.swift */; };
 		7D1999E62A715C4E00DC3F6B /* raceCar.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D1999E52A715C4E00DC3F6B /* raceCar.json */; };
 		7D1999E92A71642100DC3F6B /* RegularTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1999E72A71642100DC3F6B /* RegularTableViewCell.swift */; };
 		7D1999EA2A71642100DC3F6B /* RegularTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D1999E82A71642100DC3F6B /* RegularTableViewCell.xib */; };
@@ -34,6 +33,8 @@
 		7D3237342A632C5500476039 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D3237322A632C5500476039 /* StartViewController.xib */; };
 		7D32373F2A681F9E00476039 /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D32373D2A681F9E00476039 /* PhotoTableViewCell.swift */; };
 		7D3237402A681F9E00476039 /* PhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D32373E2A681F9E00476039 /* PhotoTableViewCell.xib */; };
+		7D375E852A83D5BA00012966 /* newFontFoeMyApp.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D375E842A83D5BA00012966 /* newFontFoeMyApp.ttf */; };
+		7D375E862A83DB1C00012966 /* SideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1999E12A70AE1E00DC3F6B /* SideViewController.swift */; };
 		7D773B432A5E1F9E005C9573 /* SettingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D773B422A5E1F9E005C9573 /* SettingManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		7D3237322A632C5500476039 /* StartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
 		7D32373D2A681F9E00476039 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
 		7D32373E2A681F9E00476039 /* PhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoTableViewCell.xib; sourceTree = "<group>"; };
+		7D375E842A83D5BA00012966 /* newFontFoeMyApp.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = newFontFoeMyApp.ttf; sourceTree = "<group>"; };
 		7D773B422A5E1F9E005C9573 /* SettingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,9 +198,18 @@
 			path = "Regular Cells";
 			sourceTree = "<group>";
 		};
+		7D375E832A83D58400012966 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7D375E842A83D5BA00012966 /* newFontFoeMyApp.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		7D773B3F2A5DD2BB005C9573 /* Resorces */ = {
 			isa = PBXGroup;
 			children = (
+				7D375E832A83D58400012966 /* Fonts */,
 				7D1999E52A715C4E00DC3F6B /* raceCar.json */,
 				7D0D582E2A59DEBC00281153 /* AppDelegate.swift */,
 				7D0D58302A59DEBC00281153 /* SceneDelegate.swift */,
@@ -293,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D1999EA2A71642100DC3F6B /* RegularTableViewCell.xib in Resources */,
+				7D375E852A83D5BA00012966 /* newFontFoeMyApp.ttf in Resources */,
 				7D1999E62A715C4E00DC3F6B /* raceCar.json in Resources */,
 				7D0D583B2A59DEBE00281153 /* LaunchScreen.storyboard in Resources */,
 				7D0D58532A5C47E500281153 /* OpenSetting.xib in Resources */,
@@ -315,6 +327,7 @@
 				7D1999DA2A709F7400DC3F6B /* NickNameTableViewCell.swift in Sources */,
 				7D1999E92A71642100DC3F6B /* RegularTableViewCell.swift in Sources */,
 				7D32373F2A681F9E00476039 /* PhotoTableViewCell.swift in Sources */,
+				7D375E862A83DB1C00012966 /* SideViewController.swift in Sources */,
 				7D773B432A5E1F9E005C9573 /* SettingManager.swift in Sources */,
 				7D0D58332A59DEBC00281153 /* ViewController.swift in Sources */,
 				7D1999F22A744C0F00DC3F6B /* StatsManager.swift in Sources */,
@@ -328,7 +341,6 @@
 				7D0D584A2A5C3D9F00281153 /* SettingsViewController.swift in Sources */,
 				7D0D58572A5C4F2800281153 /* FeedItem.swift in Sources */,
 				7D0D58502A5C428500281153 /* Settings.swift in Sources */,
-				7D1999E22A70AE1E00DC3F6B /* SideViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
