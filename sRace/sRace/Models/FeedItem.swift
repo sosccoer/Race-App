@@ -7,15 +7,15 @@
 
 import Foundation
 
-struct TypeOfCell{
+struct TypeOfCell: Codable {
     
    var type: TypeCell
    var text: String
-    var switcher:Any
+    var switcher:Bool?
     
 }
 
-enum TypeCell {
+enum TypeCell: Codable {
     
     case switchCell
     case openCell

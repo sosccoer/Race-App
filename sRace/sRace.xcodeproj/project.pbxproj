@@ -35,6 +35,7 @@
 		7D3237402A681F9E00476039 /* PhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D32373E2A681F9E00476039 /* PhotoTableViewCell.xib */; };
 		7D375E852A83D5BA00012966 /* newFontFoeMyApp.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D375E842A83D5BA00012966 /* newFontFoeMyApp.ttf */; };
 		7D375E862A83DB1C00012966 /* SideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1999E12A70AE1E00DC3F6B /* SideViewController.swift */; };
+		7D3B54ED2AA677C700255660 /* URLManager .swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B54EC2AA677C700255660 /* URLManager .swift */; };
 		7D773B432A5E1F9E005C9573 /* SettingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D773B422A5E1F9E005C9573 /* SettingManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		7D32373D2A681F9E00476039 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
 		7D32373E2A681F9E00476039 /* PhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoTableViewCell.xib; sourceTree = "<group>"; };
 		7D375E842A83D5BA00012966 /* newFontFoeMyApp.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = newFontFoeMyApp.ttf; sourceTree = "<group>"; };
+		7D3B54EC2AA677C700255660 /* URLManager .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLManager .swift"; sourceTree = "<group>"; };
 		7D773B422A5E1F9E005C9573 /* SettingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -226,6 +228,7 @@
 			children = (
 				7D773B422A5E1F9E005C9573 /* SettingManager.swift */,
 				7D1999F12A744C0F00DC3F6B /* StatsManager.swift */,
+				7D3B54EC2AA677C700255660 /* URLManager .swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				7D1999EC2A7168FE00DC3F6B /* StatsModel.swift in Sources */,
 				7D0D584A2A5C3D9F00281153 /* SettingsViewController.swift in Sources */,
 				7D0D58572A5C4F2800281153 /* FeedItem.swift in Sources */,
+				7D3B54ED2AA677C700255660 /* URLManager .swift in Sources */,
 				7D0D58502A5C428500281153 /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

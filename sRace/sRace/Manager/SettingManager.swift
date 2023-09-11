@@ -6,7 +6,7 @@
 //
 import Foundation
 
-class SettingsClass {
+class SettingsClass  {
     
     public static var sharedInfo = SettingsClass()
     
@@ -14,17 +14,26 @@ class SettingsClass {
     
     var initialSettings: [TypeOfCell] = [
         
-        
         TypeOfCell(type: .switchCell, text: "Тени", switcher: true),
-        TypeOfCell(type: .openCell, text: "Графика",switcher: ""),
-        TypeOfCell(type: .nickNameCell, text: "Имя пользователя",switcher: ""),
+        TypeOfCell(type: .openCell, text: "Графика"),
+        TypeOfCell(type: .nickNameCell, text: "Имя пользователя"),
         TypeOfCell(type: .switchCell, text: "Звук", switcher: false),
-        TypeOfCell(type: .openCell, text: "Улучшения",switcher: "")
+        TypeOfCell(type: .openCell, text: "Улучшения")
         
     ]
     
     
     
     
-   
+    
 }
+
+
+
+
+
+
+
+
+
+

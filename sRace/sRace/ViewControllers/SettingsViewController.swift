@@ -18,6 +18,8 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadSettings()
+        
         setupTable()
         NotificationCenter.default.addObserver(
             self,
@@ -76,13 +78,34 @@ class SettingsViewController: UIViewController {
     @IBAction func saveChanges(_ sender: Any) {
         items = settings
         SettingsClass.sharedInfo.initialSettings = settings
+        
+        if let data = try? JSONEncoder().encode(items){
+                UserDefaults.standard.set(data, forKey: "settings")
+            }
+        loadSettings()
+        
         TableView.reloadData()
     }
+    
+    func loadSettings () {
+        
+        if
+            let data = UserDefaults.standard.data(forKey: "settings") as? Data,
+            let newItems = try? JSONDecoder().decode([TypeOfCell].self, from: data){
+            items = newItems
+            print(items)
+        }
+        
+    }
+    
+    
     
     @IBAction func cancelChanges (_ sender: Any) {
         settings = items
         TableView.reloadData()
     }
+    
+    
     
     
 }

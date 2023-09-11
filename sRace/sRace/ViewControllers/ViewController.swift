@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var greetingLabel: UILabel!
@@ -29,6 +30,7 @@ class ViewController: UIViewController {
     @IBAction func startGame(_ sender: UIButton) {
         let destination = StartViewController()
         navigationController?.pushViewController(destination, animated: true)
+       
     }
     
     
