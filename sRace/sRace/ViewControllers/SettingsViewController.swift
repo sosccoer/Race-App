@@ -21,6 +21,13 @@ class SettingsViewController: UIViewController {
         loadSettings()
         
         setupTable()
+        
+        forUserName()
+        
+    }
+    
+    func forUserName(){
+        
         NotificationCenter.default.addObserver(
             self,
             selector:#selector(updateUserName(_:)),
@@ -82,6 +89,7 @@ class SettingsViewController: UIViewController {
         if let data = try? JSONEncoder().encode(items){
                 UserDefaults.standard.set(data, forKey: "settings")
             }
+        
         loadSettings()
         
         TableView.reloadData()
@@ -98,15 +106,10 @@ class SettingsViewController: UIViewController {
         
     }
     
-    
-    
     @IBAction func cancelChanges (_ sender: Any) {
         settings = items
         TableView.reloadData()
     }
-    
-    
-    
     
 }
 
